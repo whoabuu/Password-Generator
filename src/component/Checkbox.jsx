@@ -1,13 +1,14 @@
 import React from "react";
 
-const Checkbox = () => {
+const Checkbox = ({options, handleCheckboxChange}) => {
     return(
       <div className="grid grid-cols-2 gap-4 mt-4">
 
          <div className="flex items-center gap-x-3">
            <input 
            type="checkbox" 
-           defaultChecked={true}
+           checked={options.upper}
+           onChange={()=>handleCheckboxChange("upper")}
            className="w-5 h-5 text-blue-600 cursor-pointer"
            id="upper"
            />
@@ -19,7 +20,8 @@ const Checkbox = () => {
          <div className="flex items-center gap-x-3">
            <input 
            type="checkbox" 
-           defaultChecked={true}
+           checked={options.lower}
+           onChange={()=>handleCheckboxChange("lower")}
            className="w-5 h-5 text-blue-600 cursor-pointer"
            id="lower"
            />
@@ -31,9 +33,10 @@ const Checkbox = () => {
          <div className="flex items-center gap-x-3">
            <input 
            type="checkbox" 
-           defaultChecked={true}
            className="w-5 h-5 text-blue-600 cursor-pointer"
            id="number"
+           checked={options.number}
+           onChange={()=>handleCheckboxChange("number")}
            />
            <label htmlFor="number" className="text-lg font-medium cursor-pointer whitespace-nowrap">
               Numbers
@@ -43,7 +46,8 @@ const Checkbox = () => {
          <div className="flex items-center gap-x-3">
            <input 
            type="checkbox" 
-           defaultChecked={true}
+           checked={options.char}
+           onChange={()=>handleCheckboxChange("char")}
            className="w-5 h-5 text-blue-600 cursor-pointer"
            id="char"
            />

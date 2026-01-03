@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
-const Slider = () =>{
-
-    const[length, setLength]= useState(8);
+const Slider = ({length, setLength}) =>{
 
     const min = 6;
     const max = 30;
