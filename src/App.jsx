@@ -48,9 +48,9 @@ const App = ()=>{
 
   }, [options, length]);
 
-  useEffect(() =>{
-    generatePassword();
-  },[generatePassword]);
+  // useEffect(() =>{
+  //   generatePassword();
+  // },[generatePassword]);
 
   return(
     <div className="h-screen flex justify-center items-center bg-gray-100 text-black">
